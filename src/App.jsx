@@ -24,6 +24,14 @@ const skillGroups = [
       "AWS CLI",
     ],
   },
+    {
+    title: "Operating Systems",
+    items: [
+      " Linux",
+      " Windows",
+    ],
+  },
+
   {
     title: "DevOps",
     items: [
@@ -600,15 +608,17 @@ function App() {
                       <div className="skill-card-header">
 
                         <span>
-                          {group.title === "Cloud"
-                            ? "☁"
-                            : group.title === "DevOps"
-                            ? "⚙"
-                            : group.title === "Containers"
-                            ? "◫"
-                            : group.title === "Infrastructure"
-                            ? "⌁"
-                            : "⌘"}
+                         {group.title === "Cloud"
+                          ? "☁"
+                          : group.title === "Operating Systems"
+                          ? "💻"
+                          : group.title === "DevOps"
+                          ? "⚙"
+                          : group.title === "Containers"
+                          ? "◫"
+                          : group.title === "Infrastructure"
+                          ? "⌁"
+                          : "⌘"}
                         </span>
 
                         <h3>
