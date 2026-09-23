@@ -309,9 +309,9 @@ function App() {
               <h1>
                 Building
                 <br />
-                <span>cloud infrastructure</span>
+                <span>scalable cloud infrastructure</span>
                 <br />
-                that scales.
+                with DevOps automation.
               </h1>
 
               <p className="hero-description">
@@ -385,9 +385,8 @@ function App() {
                 </div>
 
                 <img
-                  src="/images/cloud.jpg"
+                  src="/image/cloud.png"
                   alt="Cloud & DevOps Infrastructure"
-                  className="profile-image"
                 />
 
                 <div className="photo-caption">
@@ -472,24 +471,19 @@ function App() {
               <div className="about-intro reveal">
 
                 <p className="large-text">
-                  MCA graduate focused on building,
-                  deploying and automating cloud
-                  infrastructure.
+                  MCA graduate focused on cloud infrastructure, 
+                  automation and reliable deployments.
                 </p>
 
                 <p>
-                  I have hands-on experience with AWS,
-                  Linux, Docker, Kubernetes, Terraform,
-                  Ansible, Jenkins, Argo CD, NGINX and
-                  Bash through practical Cloud & DevOps
-                  training and projects.
+                  I have hands-on experience with AWS, Linux, Docker, 
+                  Kubernetes, Terraform, Ansible, Jenkins, Argo CD, NGINX and Bash 
+                  through practical training and Cloud & DevOps projects.
                 </p>
 
                 <p>
-                  My interests include infrastructure
-                  automation, containerization, CI/CD,
-                  GitOps, monitoring, troubleshooting and
-                  reliable cloud deployments.
+                  I enjoy working with infrastructure automation, containerization, CI/CD, 
+                  GitOps, monitoring and troubleshooting to build reliable cloud environments.
                 </p>
 
               </div>
@@ -527,7 +521,7 @@ function App() {
                 <div className="detail-row">
                   <span>Specialization</span>
                   <strong>
-                    Kubernetes / IaC / CI/CD
+                    Cloud Infrastructure / Docker / Kubernetes / IaC / CI/CD / GitOps / Terraform
                   </strong>
                 </div>
 
@@ -583,7 +577,7 @@ function App() {
                   </span>
 
                   <strong>
-                    AWS + Kubernetes + Terraform
+                     AWS / Cloud Infrastructure / DevOps / Kubernetes / Terraform / CI/CD / GitOps
                   </strong>
 
                 </div>
@@ -669,7 +663,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Cloud & DevOps projects.
+                  Cloud & DevOps Projects.
                 </h2>
 
               </div>
@@ -798,7 +792,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Training & education.
+                  Training & Education.
                 </h2>
 
               </div>
@@ -910,7 +904,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Training & certification.
+                  Training & Certification.
                 </h2>
 
               </div>

@@ -12,7 +12,7 @@ const profile = {
   headline: "CLOUD & DEVOPS",
 
   // Hero / portfolio image
-  image: "/cloud.jpg",
+  image: "/image/cloud.jpg",
 
   about: `
 MCA graduate with hands-on experience in AWS, Linux, Docker, Kubernetes,
@@ -180,7 +180,7 @@ Designed a reusable cloud-agnostic configuration workflow.
         "Shell Scripting"
       ],
 
-      github: "https://github.com/dhanushv4/terraform-training2"
+      github: "https://github.com/dhanushv4/cloud-agnostics"
     }
   ]
 };
