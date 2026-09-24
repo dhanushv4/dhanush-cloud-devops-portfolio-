@@ -12,7 +12,7 @@ const profile = {
   headline: "CLOUD & DEVOPS",
 
   // Hero / portfolio image
-  image: "/image/cloud.jpg",
+  image: "/image/cloud.png",
 
   about: `
 MCA graduate with hands-on experience in AWS, Linux, Docker, Kubernetes,
@@ -54,7 +54,7 @@ Cloud Infrastructure Engineer or SRE role.
   ],
 
   certifications: [
-    "Cloud Computing Training — ACTE, Bengaluru"
+    "Cloud Computing — ACTE, Bengaluru"
   ],
 
   expertise: [
