@@ -468,7 +468,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Cloud & DevOps focused.
+                  Cloud & DevOps focused
                 </h2>
               </div>
 
@@ -562,7 +562,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Cloud & DevOps stack.
+                  Skills
                 </h2>
               </div>
 
@@ -673,7 +673,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Cloud & DevOps Projects.
+                  Projects
                 </h2>
 
               </div>
@@ -802,7 +802,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Training & Education.
+                  Experience & Education
                 </h2>
 
               </div>
@@ -914,7 +914,7 @@ function App() {
                 </p>
 
                 <h2>
-                  Training & Certification.
+                  Certification
                 </h2>
 
               </div>
