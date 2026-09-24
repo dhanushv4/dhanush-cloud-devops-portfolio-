@@ -146,6 +146,7 @@ Developed supporting services using Flask, NGINX, Linux and Bash.
 
       youtube: "https://www.youtube.com/watch?v=HVXt9-oxVtA"
     },
+    
 
     {
       title: "Cloud-Agnostic Terraform & Ansible Automation Platform",
