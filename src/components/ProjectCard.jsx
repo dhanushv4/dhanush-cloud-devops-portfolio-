@@ -20,16 +20,27 @@ function ProjectCard({
           </span>
 
           <span className="project-category">
-            Full Stack
+            DevOps
           </span>
 
         </div>
 
+        {/* YouTube Demo Video */}
+        {project.youtube && (
+          <div className="video-container">
+            <iframe
+              src={project.youtube}
+              title={project.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        )}
 
         <h3 className="project-title">
           {project.title}
         </h3>
-
 
         <p className="project-description">
           {project.description
@@ -37,7 +48,6 @@ function ProjectCard({
             .split("\n\n")[0]
             .replace(/\s+/g, " ")}
         </p>
-
 
         <div className="project-technologies">
 
@@ -57,7 +67,6 @@ function ProjectCard({
 
         </div>
 
-
         <div className="project-card-footer">
 
           <button
@@ -65,16 +74,14 @@ function ProjectCard({
             onClick={onOpen}
             className="explore-project"
           >
-            Explore project →
+            Explore Project →
           </button>
 
           <a
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            onClick={(event) =>
-              event.stopPropagation()
-            }
+            onClick={(event) => event.stopPropagation()}
             className="project-github"
           >
             GitHub ↗
