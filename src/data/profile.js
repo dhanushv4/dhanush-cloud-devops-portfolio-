@@ -145,6 +145,8 @@ Developed supporting services using Flask, NGINX, Linux and Bash.
       github: "https://github.com/dhanushv4/chaos-lab.git",
 
       youtube: "https://youtu.be/NeNoNlKaAUI?si=U2pmD-xFapj6lZZP"
+
+      documents: "/documents/Choas-Engineer-Cloud-Based.docx"
     },
     
 
@@ -182,6 +184,8 @@ Designed a reusable cloud-agnostic configuration workflow.
       ],
 
       github: "https://github.com/dhanushv4/cloud-agnostics"
+
+      document: "/documents/Cloud-Agnostics-Documentation.docx"
     }
   ]
 };
