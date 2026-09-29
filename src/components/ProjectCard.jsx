@@ -8,11 +8,9 @@ function ProjectCard({
 
   return (
     <article className="project-card">
-
       <div className="project-top-line" />
 
       <div className="project-card-content">
-
         <div className="project-card-top">
           <span className="project-number">
             {number}
@@ -59,19 +57,43 @@ function ProjectCard({
             Explore Project →
           </button>
 
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(event) => event.stopPropagation()}
-            className="project-github"
-          >
-            GitHub ↗
-          </a>
+          <div className="project-links">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(event) => event.stopPropagation()}
+              className="project-github"
+            >
+              GitHub ↗
+            </a>
+
+            {project.document && (
+              <a
+                href={project.document}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(event) => event.stopPropagation()}
+                className="project-doc"
+              >
+                📄 Docs
+              </a>
+            )}
+
+            {project.youtube && (
+              <a
+                href={project.youtube}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(event) => event.stopPropagation()}
+                className="project-demo"
+              >
+                ▶ Demo
+              </a>
+            )}
+          </div>
         </div>
-
       </div>
-
     </article>
   )
 }
