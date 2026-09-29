@@ -654,131 +654,113 @@ function App() {
             PROJECTS
         ========================= */}
 
-        <section
-          id="projects"
-          className="section projects-section reveal-section"
+       <section
+  id="projects"
+  className="section projects-section reveal-section"
+>
+  <div className="container">
+
+    <div className="section-heading reveal">
+      <span className="section-number">◈</span>
+
+      <div>
+        <p className="section-kicker">SELECTED WORK</p>
+        <h2>Projects</h2>
+      </div>
+    </div>
+
+    <div className="projects-intro reveal">
+      <p>
+        Practical projects demonstrating cloud infrastructure,
+        automation, containers, monitoring, Terraform and Ansible.
+      </p>
+
+      <span>02 PROJECTS</span>
+    </div>
+
+    <div className="projects-list">
+      {profile.projects.map((project, index) => (
+        <article
+          className="project-item reveal"
+          key={project.title}
+          onClick={() => setSelectedProject(project)}
+          tabIndex="0"
+          role="button"
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              setSelectedProject(project);
+            }
+          }}
         >
-          <div className="container">
-
-            <div className="section-heading reveal">
-
-              <span className="section-number">
-                ◈
-              </span>
-
-              <div>
-
-                <p className="section-kicker">
-                  SELECTED WORK
-                </p>
-
-                <h2>
-                  Projects
-                </h2>
-
-              </div>
-
-            </div>
-
-            <div className="projects-intro reveal">
-
-              <p>
-                Practical projects demonstrating cloud
-                infrastructure, automation, containers,
-                monitoring, Terraform and Ansible.
-              </p>
-
-              <span>
-                02 PROJECTS
-              </span>
-
-            </div>
-
-            <div className="projects-list">
-
-              {profile.projects.map(
-                (project, index) => (
-
-                  <article
-                    className="project-item reveal"
-                    key={project.title}
-                    onClick={() =>
-                      setSelectedProject(project)
-                    }
-                    tabIndex="0"
-                    role="button"
-                    onKeyDown={(event) => {
-
-                      if (
-                        event.key === "Enter" ||
-                        event.key === " "
-                      ) {
-                        setSelectedProject(project);
-                      }
-
-                    }}
-                  >
-
-                    <div className="project-index">
-                      {index === 0
-                        ? "AWS"
-                        : "IAC"}
-                    </div>
-
-                    <div className="project-main">
-
-                      <div className="project-heading">
-
-                        <h3>
-                          {project.title}
-                        </h3>
-
-                        <span className="project-arrow">
-                          ↗
-                        </span>
-
-                      </div>
-
-                      <p>
-                        {project.description
-                          .trim()
-                          .split("\n")[0]}
-                      </p>
-
-                      <div className="project-tech">
-
-                        {project.technologies
-                          .slice(0, 6)
-                          .map(
-                            (technology) => (
-                              <span
-                                key={technology}
-                              >
-                                {technology}
-                              </span>
-                            )
-                          )}
-
-                      </div>
-
-                    </div>
-
-                    <div className="project-action">
-                      <span>
-                        VIEW DETAILS
-                      </span>
-                    </div>
-
-                  </article>
-
-                )
-              )}
-
-            </div>
-
+          <div className="project-index">
+            {index === 0 ? "AWS" : "IAC"}
           </div>
-        </section>
 
+          <div className="project-main">
+            <div className="project-heading">
+              <h3>{project.title}</h3>
+              <span className="project-arrow">↗</span>
+            </div>
+
+            <p>
+              {project.description
+                .trim()
+                .split("\n")[0]}
+            </p>
+
+            <div className="project-tech">
+              {project.technologies.slice(0, 6).map((technology) => (
+                <span key={technology}>{technology}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Side Buttons */}
+          <div className="project-action" onClick={(e) => e.stopPropagation()}>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="project-github"
+            >
+              GitHub ↗
+            </a>
+
+            {project.document && (
+              <a
+                href={project.document}
+                target="_blank"
+                rel="noreferrer"
+                className="project-doc"
+              >
+                📄 Docs
+              </a>
+            )}
+
+            {project.youtube && (
+              <a
+                href={project.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="project-demo"
+              >
+                ▶ Demo
+              </a>
+            )}
+
+            <button
+              className="project-view"
+              onClick={() => setSelectedProject(project)}
+            >
+              VIEW DETAILS
+            </button>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
         {/* =========================
             EXPERIENCE
         ========================= */}
