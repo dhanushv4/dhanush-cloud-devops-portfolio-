@@ -185,6 +185,8 @@ Designed a reusable cloud-agnostic configuration workflow.
 
       github: "https://github.com/dhanushv4/cloud-agnostics"
 
+      youtube: "https://youtu.be/3M60xOIgRKA?si=AgP_-w5n3IHEXnRE"
+
       document: "/documents/Cloud-Agnostics-Documentation.docx"
     }
   ]
