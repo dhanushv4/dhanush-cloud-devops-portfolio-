@@ -14,7 +14,6 @@ function ProjectCard({
       <div className="project-card-content">
 
         <div className="project-card-top">
-
           <span className="project-number">
             {number}
           </span>
@@ -22,21 +21,7 @@ function ProjectCard({
           <span className="project-category">
             DevOps
           </span>
-
         </div>
-
-        {/* YouTube Demo Video */}
-        {project.youtube && (
-          <div className="video-container">
-            <iframe
-              src={project.youtube}
-              title={project.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-        )}
 
         <h3 className="project-title">
           {project.title}
@@ -50,7 +35,6 @@ function ProjectCard({
         </p>
 
         <div className="project-technologies">
-
           {project.technologies
             .slice(0, 5)
             .map((technology) => (
@@ -64,11 +48,9 @@ function ProjectCard({
               +{project.technologies.length - 5}
             </span>
           )}
-
         </div>
 
         <div className="project-card-footer">
-
           <button
             type="button"
             onClick={onOpen}
@@ -86,7 +68,6 @@ function ProjectCard({
           >
             GitHub ↗
           </a>
-
         </div>
 
       </div>

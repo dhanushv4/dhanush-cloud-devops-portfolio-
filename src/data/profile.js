@@ -144,7 +144,7 @@ Developed supporting services using Flask, NGINX, Linux and Bash.
 
       github: "https://github.com/dhanushv4/chaos-lab.git",
 
-      youtube: "https://www.youtube.com/watch?v=HVXt9-oxVtA"
+      youtube: "https://youtu.be/NeNoNlKaAUI?si=U2pmD-xFapj6lZZP"
     },
     
 
