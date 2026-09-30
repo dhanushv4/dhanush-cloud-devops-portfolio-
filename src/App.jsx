@@ -653,8 +653,7 @@ function App() {
         {/* =========================
             PROJECTS
         ========================= */}
-
-       <section
+<section
   id="projects"
   className="section projects-section reveal-section"
 >
@@ -674,12 +673,12 @@ function App() {
         Practical projects demonstrating cloud infrastructure,
         automation, containers, monitoring, Terraform and Ansible.
       </p>
-
-      <span>02 PROJECTS</span>
     </div>
 
     <div className="projects-list">
+
       {profile.projects.map((project, index) => (
+
         <article
           className="project-item reveal"
           key={project.title}
@@ -688,18 +687,42 @@ function App() {
           role="button"
           onKeyDown={(event) => {
             if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
               setSelectedProject(project);
             }
           }}
         >
+
+          {/* Project Type */}
           <div className="project-index">
-            {index === 0 ? "AWS" : "IAC"}
+            {index === 0
+              ? "AWS"
+              : index === 1
+              ? "IAC"
+              : "CLOUD"}
           </div>
 
+          {/* Project Content */}
           <div className="project-main">
+
             <div className="project-heading">
+
               <h3>{project.title}</h3>
-              <span className="project-arrow">↗</span>
+
+              {/* GitHub Arrow */}
+              <a
+                className="project-arrow"
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                onClick={(event) =>
+                  event.stopPropagation()
+                }
+                aria-label={`Open ${project.title} on GitHub`}
+              >
+                ↗
+              </a>
+
             </div>
 
             <p>
@@ -709,23 +732,42 @@ function App() {
             </p>
 
             <div className="project-tech">
-              {project.technologies.slice(0, 6).map((technology) => (
-                <span key={technology}>{technology}</span>
-              ))}
+
+              {project.technologies
+                .slice(0, 6)
+                .map((technology) => (
+
+                  <span key={technology}>
+                    {technology}
+                  </span>
+
+                ))}
+
             </div>
+
           </div>
 
           {/* Right Side Buttons */}
-          <div className="project-action" onClick={(e) => e.stopPropagation()}>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="project-github"
-            >
-              GitHub ↗
-            </a>
+          <div
+            className="project-action"
+            onClick={(event) =>
+              event.stopPropagation()
+            }
+          >
 
+            {/* GitHub */}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="project-github"
+              >
+                GitHub ↗
+              </a>
+            )}
+
+            {/* Documentation */}
             {project.document && (
               <a
                 href={project.document}
@@ -737,6 +779,7 @@ function App() {
               </a>
             )}
 
+            {/* YouTube Demo */}
             {project.youtube && (
               <a
                 href={project.youtube}
@@ -748,15 +791,23 @@ function App() {
               </a>
             )}
 
+            {/* Details Modal */}
             <button
+              type="button"
               className="project-view"
-              onClick={() => setSelectedProject(project)}
+              onClick={() =>
+                setSelectedProject(project)
+              }
             >
               VIEW DETAILS
             </button>
+
           </div>
+
         </article>
+
       ))}
+
     </div>
 
   </div>

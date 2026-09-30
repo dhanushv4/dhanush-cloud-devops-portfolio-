@@ -144,11 +144,10 @@ Developed supporting services using Flask, NGINX, Linux and Bash.
 
       github: "https://github.com/dhanushv4/chaos-lab.git",
 
-      youtube: "https://youtu.be/NeNoNlKaAUI?si=U2pmD-xFapj6lZZP"
+      youtube: "https://youtu.be/NeNoNlKaAUI?si=U2pmD-xFapj6lZZP",
 
-      documents: "/documents/Choas-Engineer-Cloud-Based.docx"
+      documents: "public/docements/Choas Engineer-Cloud Based.pdf"
     },
-    
 
     {
       title: "Cloud-Agnostic Terraform & Ansible Automation Platform",
@@ -183,11 +182,48 @@ Designed a reusable cloud-agnostic configuration workflow.
         "Shell Scripting"
       ],
 
-      github: "https://github.com/dhanushv4/cloud-agnostics"
+      github: "https://github.com/dhanushv4/cloud-agnostics",
 
-      youtube: "https://youtu.be/3M60xOIgRKA?si=AgP_-w5n3IHEXnRE"
+      youtube: "https://youtu.be/3M60xOIgRKA?si=AgP_-w5n3IHEXnRE",
 
-      document: "/documents/Cloud-Agnostics-Documentation.docx"
+      document: "public/docements/Cloud-Agnostics docement.pdf"
+    },
+
+    {
+      title: "AWS Cloud Cost Estimation & Analysis",
+
+      description: `
+Python-based AWS cloud cost estimation application designed to
+estimate infrastructure costs before deployment.
+
+Developed a GUI-based cost estimation tool that allows users to
+select AWS resources and calculate estimated monthly and yearly costs.
+
+Implemented cost calculation logic for AWS infrastructure resources
+and provided visual cost analysis through charts and reports.
+
+Built the application using Python and Tkinter with a simple
+user-friendly interface for cloud cost planning.
+
+The project helps users understand estimated AWS infrastructure
+expenses and compare resource costs before deployment.
+`,
+
+      technologies: [
+        "AWS",
+        "Python",
+        "Tkinter",
+        "AWS EC2",
+        "Cloud Cost Estimation",
+        "Cost Analysis",
+        "GUI",
+        "Data Visualization",
+        "Linux",
+        "Git",
+        "GitHub"
+      ],
+
+      github: "https://github.com/dhanushv4/aws-cost-estimation.git"
     }
   ]
 };
