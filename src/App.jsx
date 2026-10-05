@@ -702,107 +702,44 @@ function App() {
               : "CLOUD"}
           </div>
 
-          {/* Project Content */}
-          <div className="project-main">
+     {/* Project Content */}
+<div className="project-main">
 
-            <div className="project-heading">
+  <div className="project-heading">
+    <h3>{project.title}</h3>
+  </div>
 
-              <h3>{project.title}</h3>
+  <p>
+    {project.description
+      .trim()
+      .split("\n")[0]}
+  </p>
 
-              {/* GitHub Arrow */}
-              <a
-                className="project-arrow"
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                onClick={(event) =>
-                  event.stopPropagation()
-                }
-                aria-label={`Open ${project.title} on GitHub`}
-              >
-                ↗
-              </a>
+  <div className="project-tech">
+    {project.technologies
+      .slice(0, 6)
+      .map((technology) => (
+        <span key={technology}>
+          {technology}
+        </span>
+      ))}
+  </div>
 
-            </div>
+</div>
 
-            <p>
-              {project.description
-                .trim()
-                .split("\n")[0]}
-            </p>
-
-            <div className="project-tech">
-
-              {project.technologies
-                .slice(0, 6)
-                .map((technology) => (
-
-                  <span key={technology}>
-                    {technology}
-                  </span>
-
-                ))}
-
-            </div>
-
-          </div>
-
-          {/* Right Side Buttons */}
-          <div
-            className="project-action"
-            onClick={(event) =>
-              event.stopPropagation()
-            }
-          >
-
-            {/* GitHub */}
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="project-github"
-              >
-                GitHub ↗
-              </a>
-            )}
-
-            {/* Documentation */}
-            {project.document && (
-              <a
-                href={project.document}
-                target="_blank"
-                rel="noreferrer"
-                className="project-doc"
-              >
-                📄 Docs
-              </a>
-            )}
-
-            {/* YouTube Demo */}
-            {project.youtube && (
-              <a
-                href={project.youtube}
-                target="_blank"
-                rel="noreferrer"
-                className="project-demo"
-              >
-                ▶ Demo
-              </a>
-            )}
-
-            {/* Details Modal */}
-            <button
-              type="button"
-              className="project-view"
-              onClick={() =>
-                setSelectedProject(project)
-              }
-            >
-              VIEW DETAILS
-            </button>
-
-          </div>
+{/* View Details Only */}
+<div
+  className="project-action"
+  onClick={(event) => event.stopPropagation()}
+>
+  <button
+    type="button"
+    className="project-view"
+    onClick={() => setSelectedProject(project)}
+  >
+    VIEW DETAILS
+  </button>
+</div>
 
         </article>
 

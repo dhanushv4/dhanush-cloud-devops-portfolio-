@@ -835,43 +835,43 @@ a {
 
   font-weight: 600;
 }
+/* =========================
+   SKILLS GRID
+========================= */
 
 .skills-grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  gap: 22px;
 
-  border-top: 1px solid var(--border);
-
-  border-left: 1px solid var(--border);
+  /* Removes outer grid lines */
+  border: none;
 }
 
 .skill-card {
   min-height: 165px;
-
   padding: 28px;
 
-  border-right: 1px solid var(--border);
-
-  border-bottom: 1px solid var(--border);
+  border: none;
 
   transition:
     background var(--transition),
     transform var(--transition);
 }
-
 .skill-card:hover {
-  background: rgba(0, 140, 255, 0.025);
+  transform: translateY(-5px);
+
+  background: var(--card-hover);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .skill-card-header {
   display: flex;
-
   align-items: center;
-
   gap: 14px;
-
   margin-bottom: 25px;
 }
 
@@ -879,7 +879,6 @@ a {
   color: var(--accent);
 
   font-family: var(--font-mono);
-
   font-size: 10px;
 }
 
@@ -889,54 +888,44 @@ a {
   color: var(--text);
 
   font-size: 17px;
-
   font-weight: 600;
 }
 
 .skill-tags {
   display: flex;
-
   flex-wrap: wrap;
-
-  gap: 8px;
+  gap: 10px;
 }
 
-.skill-tags span,
-.project-tech span,
-.modal-tech span {
-  padding: 8px 11px;
+.skill-tags span {
+  padding: 10px 14px;
 
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 140, 255, 0.18);
+  border-radius: 10px;
 
-  color: #b9b5ae;
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #c8c5bf;
 
   font-family: var(--font-mono);
-
   font-size: 11px;
-
   line-height: 1;
 
-  transition:
-    border-color var(--transition),
-    color var(--transition),
-    background var(--transition);
+  transition: all 0.25s ease;
 }
 
-.skill-tags span:hover,
-.project-tech span:hover,
-.modal-tech span:hover {
-  border-color: var(--accent-border);
-
+.skill-tags span:hover {
   color: var(--accent);
 
-  background: rgba(
-    200,
-    243,
-    29,
-    0.04
-  );
-}
+  border-color: rgba(0, 140, 255, 0.55);
 
+  background: rgba(0, 140, 255, 0.06);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(0, 140, 255, 0.12);
+}
 /* =========================
    PROJECTS
 ========================= */
