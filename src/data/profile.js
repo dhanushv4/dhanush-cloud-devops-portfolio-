@@ -42,7 +42,7 @@ Cloud Infrastructure Engineer or SRE role.
       college: "Saveetha University",
       location: "Chennai",
       period: "2024–2026",
-      cgpa: "7.59"
+      cgpa: "8.21"
     },
     {
       degree: "Bachelor of Computer Applications (BCA)",
