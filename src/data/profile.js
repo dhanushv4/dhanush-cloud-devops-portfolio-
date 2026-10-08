@@ -102,7 +102,7 @@ Cloud Infrastructure Engineer or SRE role.
 
   linkedin: "https://www.linkedin.com/in/dhanush05v/",
 
-  resume: "/Dhanush.pdf",
+  resume: "/Dhanush.V.pdf",
 
   projects: [
     {
