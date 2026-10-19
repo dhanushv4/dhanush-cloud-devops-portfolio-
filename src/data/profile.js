@@ -1,14 +1,18 @@
-
 const profile = {
-  name: "DHANUSH V",
+  name: "Dhanush V",
+
   role: "MCA Graduate",
+
   email: "vdhanushyam@gmail.com",
+
   phone: "6380921601",
+
   location: "Bengaluru, India",
+
   headline: "CLOUD & DEVOPS",
 
   // Hero / portfolio image
-  image: "/image/dhanush.jpeg",
+  image: "/image/cloud.png",
 
   about: `
 MCA graduate with hands-on experience in AWS, Linux, Docker, Kubernetes,
@@ -95,11 +99,13 @@ Cloud Infrastructure Engineer or SRE role.
   ],
 
   github: "https://github.com/dhanushv4",
-  linkedin: "https://www.linkedin.com/in/dhanush05/",
+
+  linkedin: "https://www.linkedin.com/in/dhanush05v/",
+
   resume: "/Dhanush.pdf",
 
   projects: [
-    {
+    { 
       title: "Cloud-Based Chaos Engineering & Infrastructure Monitoring",
 
       description: `
@@ -137,8 +143,10 @@ Developed supporting services using Flask, NGINX, Linux and Bash.
       ],
 
       github: "https://github.com/dhanushv4/chaos-lab.git",
-      youtube: "https://youtu.be/NeNoNlKaAUI",
-      documents: "/docements/Choas Engineer-Cloud Based.pdf"
+
+      youtube: "https://youtu.be/NeNoNlKaAUI?si=U2pmD-xFapj6lZZP",
+
+      documents: "public/docements/Choas Engineer-Cloud Based.pdf"
     },
 
     {
@@ -175,8 +183,10 @@ Designed a reusable cloud-agnostic configuration workflow.
       ],
 
       github: "https://github.com/dhanushv4/cloud-agnostics",
-      youtube: "https://youtu.be/3M60xOIgRKA",
-      document: "/docements/Cloud-Agnostics docement.pdf"
+
+      youtube: "https://youtu.be/3M60xOIgRKA?si=AgP_-w5n3IHEXnRE",
+
+      document: "public/docements/Cloud-Agnostics docement.pdf"
     },
 
     {
