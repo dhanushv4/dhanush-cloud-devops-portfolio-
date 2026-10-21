@@ -368,7 +368,7 @@ function App() {
                   rel="noreferrer"
                 >
                   LinkedIn ↗
-                </a>
+                </a>   
 
                 <button onClick={copyEmail}>
                   {copied
