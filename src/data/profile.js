@@ -224,6 +224,50 @@ expenses and compare resource costs before deployment.
       ],
 
       github: "https://github.com/dhanushv4/aws-cost-estimation.git"
+    },
+  
+    {
+      title: "AWS Serverless Web Analytics & Feedback Platform",
+
+      description: `
+Developed a serverless web analytics and visitor feedback platform
+using AWS services, Python, HTML, CSS and JavaScript.
+
+Designed backend functions using AWS Lambda and exposed RESTful
+endpoints through Amazon API Gateway.
+
+Implemented page-view tracking and visitor feedback storage using
+Amazon DynamoDB.
+
+Developed analytics functionality to calculate page views, identify
+popular pages and generate daily statistics.
+
+Configured scheduled processing using Amazon EventBridge and used
+Amazon CloudWatch for application logging and monitoring.
+
+Documented the application architecture, API endpoints, deployment
+steps and testing procedures.
+`,
+
+      technologies: [
+        "AWS Lambda",
+        "Amazon API Gateway",
+        "Amazon DynamoDB",
+        "Amazon S3",
+        "Amazon EventBridge",
+        "Amazon CloudWatch",
+        "Python",
+        "Boto3",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "REST API",
+        "Serverless Architecture",
+        "Git",
+        "GitHub"
+      ],
+
+      github: "https://github.com/dhanushv4/aws-serverless-web-analytics"
     }
   ]
 };
