@@ -26,7 +26,9 @@ AWS Engineer, Cloud Infrastructure Engineer or Junior SRE role.
       title: "Cloud Computing & DevOps Intern",
       company: "QUBINEX",
       location: "Chennai, Tamil Nadu",
-      period: "2026",
+      period: "2026",      trainer: "Prabhu S",
+      trainerRole: "Technical Lead",
+      status: "Internship Completed",
 
       description:[
   "Successfully completed an internship in Cloud Computing with exposure to cloud technologies and DevOps practices.",
@@ -36,9 +38,7 @@ AWS Engineer, Cloud Infrastructure Engineer or Junior SRE role.
   "Demonstrated problem-solving abilities, discipline, and a proactive approach to learning.",
   "Strengthened technical skills through practical exercises and project-based learning activities."
 ],
-      trainer: "Prabhu S",
-      trainerRole: "Technical Lead",
-      status: "Internship Completed"
+     
     },
 
   ],
@@ -60,22 +60,23 @@ AWS Engineer, Cloud Infrastructure Engineer or Junior SRE role.
     }
   ],
 
-  certifications: [
-    {
-      title: "Cloud Computing",
-      issuer: "ACTE, Bengaluru",
-      year: "2026",
-      file: "/certificates/Dhanush-V-ACTE-Certificate.pdf",
-      image: "/certificates/acte-preview.jpg"
-    },
-    {
-      title: "Cloud Computing Internship",
-      issuer: "QUBINEX",
-      year: "2026",
-      file: "/certificates/DHANUSH-V-INTERNSHIP-CERTIFICATE.pdf",
-      image: "/certificates/qubinex-preview.jpg"
-    }
-  ],
+
+certifications: [
+  {
+    title: "Cloud Computing",
+    issuer: "ACTE, Bengaluru",
+    year: "2026",
+    file: "/certificates/Dhanush-V-ACTE-Certificate.pdf",
+    image: "/certificates/acte-preview.jpg"
+  },
+  {
+    title: "Cloud Computing Internship",
+    issuer: "QUBINEX",
+    year: "2026",
+    file: "/certificates/DHANUSH%20V%20-%20INTEN.pdf",
+    image: "/certificates/qubinex-preview.jpg"
+  }
+],
 
   expertise: [
     "AWS EC2",

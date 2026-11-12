@@ -808,6 +808,21 @@ function App() {
               {item.company} · {item.location}
             </h4>
 
+           
+            {item.trainer && (
+            <h5 className="experience-trainer">
+            <strong>Technical Lead / Trainer:</strong>{" "}
+            {item.trainer}
+            </h5>
+            )}
+
+            {item.status && (
+              <h6 className="experience-status">
+                <strong>Status:</strong>{" "}
+                {item.status}
+              </h6>
+            )}
+
             <ul>
               {item.description.map((point, i) => (
                 <li key={i}>
@@ -816,18 +831,6 @@ function App() {
               ))}
             </ul>
 
-            {item.trainer && (
-              <p className="experience-trainer">
-                <strong>Technical Lead / Trainer:</strong>{" "}
-                {item.trainer}
-              </p>
-            )}
-
-            {item.status && (
-              <p className="experience-status">
-                <strong>Status:</strong> {item.status}
-              </p>
-            )}
 
           </div>
 
@@ -885,7 +888,7 @@ function App() {
             CERTIFICATIONS
         ========================= */}
 
-      
+
 <section
   id="certifications"
   className="section certifications-section reveal-section"
@@ -893,39 +896,30 @@ function App() {
   <div className="container">
 
     <div className="section-heading reveal">
-
-      <span className="section-number">
-        ◈
-      </span>
+      <span className="section-number">◈</span>
 
       <div>
-        <p className="section-kicker">
-          LEARNING
-        </p>
-
-        <h2>
-          Certifications
-        </h2>
+        <p className="section-kicker">LEARNING</p>
+        <h2>Certifications</h2>
       </div>
-
     </div>
 
     <div className="certification-list">
 
       {profile.certifications.map((certificate) => (
 
-        <a
+        <article
           className="certificate reveal"
           key={certificate.title}
-          href={certificate.file}
-          target="_blank"
-          rel="noopener noreferrer"
         >
 
           <div className="certificate-preview">
             <img
               src={certificate.image}
               alt={`${certificate.title} preview`}
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
             />
           </div>
 
@@ -935,18 +929,23 @@ function App() {
             <span>{certificate.year}</span>
           </div>
 
-          <span className="certificate-arrow">
+          <a
+            className="certificate-arrow"
+            href={certificate.file}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             VIEW CERTIFICATE ↗
-          </span>
+          </a>
 
-        </a>
+        </article>
 
       ))}
 
     </div>
-
   </div>
 </section>
+
 
 
         {/* =========================
