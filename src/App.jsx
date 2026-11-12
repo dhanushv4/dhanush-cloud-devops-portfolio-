@@ -319,7 +319,7 @@ function App() {
                 <br />
                 <span>scalable cloud infrastructure</span>
                 <br />
-                with DevOps automation.
+                with DevOps automation
               </h1>
 
               <p className="hero-description">
@@ -753,175 +753,201 @@ function App() {
             EXPERIENCE
         ========================= */}
 
-        <section
-          id="experience"
-          className="section experience-section reveal-section"
+<section
+  id="experience"
+  className="section experience-section reveal-section"
+>
+  <div className="container">
+
+    <div className="section-heading reveal">
+
+      <span className="section-number">
+        ◈
+      </span>
+
+      <div>
+        <p className="section-kicker">
+          MY JOURNEY
+        </p>
+
+        <h2>
+          Experience & Education
+        </h2>
+      </div>
+
+    </div>
+
+    <div className="timeline">
+
+      {/* PROFESSIONAL EXPERIENCE & TRAINING */}
+
+      {profile.experience.map((item, index) => (
+
+        <article
+          className="timeline-item reveal"
+          key={`${item.company}-${index}`}
         >
-          <div className="container">
 
-            <div className="section-heading reveal">
+          <div className="timeline-date">
+            {item.period}
+          </div>
 
-              <span className="section-number">
-                ◈
-              </span>
+          <div className="timeline-content">
 
-              <div>
+            <span className="timeline-type">
+              {item.company === "QUBINEX"
+                ? "INTERNSHIP"
+                : "CLOUD & DEVOPS TRAINING"}
+            </span>
 
-                <p className="section-kicker">
-                  MY JOURNEY
-                </p>
+            <h3>
+              {item.title}
+            </h3>
 
-                <h2>
-                  Experience & Education
-                </h2>
+            <h4>
+              {item.company} · {item.location}
+            </h4>
 
-              </div>
+            <ul>
+              {item.description.map((point, i) => (
+                <li key={i}>
+                  {point}
+                </li>
+              ))}
+            </ul>
 
-            </div>
+            {item.trainer && (
+              <p className="experience-trainer">
+                <strong>Technical Lead / Trainer:</strong>{" "}
+                {item.trainer}
+              </p>
+            )}
 
-            <div className="timeline">
-
-              <article className="timeline-item reveal">
-
-                <div className="timeline-date">
-                  2026
-                </div>
-
-                <div className="timeline-content">
-
-                  <span className="timeline-type">
-                    CLOUD & DEVOPS TRAINING
-                  </span>
-
-                  <h3>
-                    Cloud & DevOps Training
-                  </h3>
-
-                  <h4>
-                    ACTE · Bengaluru
-                  </h4>
-
-                  <ul>
-                    {profile.experience
-                      .slice(1)
-                      .map((item) => (
-                        <li key={item}>
-                          {item}
-                        </li>
-                      ))}
-                  </ul>
-
-                </div>
-
-              </article>
-
-              {profile.education.map(
-                (education) => (
-
-                  <article
-                    className="timeline-item reveal"
-                    key={education.degree}
-                  >
-
-                    <div className="timeline-date">
-                      {education.period}
-                    </div>
-
-                    <div className="timeline-content">
-
-                      <span className="timeline-type">
-                        EDUCATION
-                      </span>
-
-                      <h3>
-                        {education.degree}
-                      </h3>
-
-                      <h4>
-                        {education.college} ·{" "}
-                        {education.location}
-                      </h4>
-
-                      <p className="education-result">
-                        CGPA{" "}
-                        <strong>
-                          {education.cgpa}
-                        </strong>
-                      </p>
-
-                    </div>
-
-                  </article>
-
-                )
-              )}
-
-            </div>
+            {item.status && (
+              <p className="experience-status">
+                <strong>Status:</strong> {item.status}
+              </p>
+            )}
 
           </div>
-        </section>
+
+        </article>
+
+      ))}
+
+      {/* EDUCATION */}
+
+      {profile.education.map((education) => (
+
+        <article
+          className="timeline-item reveal"
+          key={education.degree}
+        >
+
+          <div className="timeline-date">
+            {education.period}
+          </div>
+
+          <div className="timeline-content">
+
+            <span className="timeline-type">
+              EDUCATION
+            </span>
+
+            <h3>
+              {education.degree}
+            </h3>
+
+            <h4>
+              {education.college} · {education.location}
+            </h4>
+
+            <p className="education-result">
+              CGPA{" "}
+              <strong>
+                {education.cgpa}
+              </strong>
+            </p>
+
+          </div>
+
+        </article>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
 
         {/* =========================
             CERTIFICATIONS
         ========================= */}
 
-        <section
-          id="certifications"
-          className="section certifications-section reveal-section"
+      
+<section
+  id="certifications"
+  className="section certifications-section reveal-section"
+>
+  <div className="container">
+
+    <div className="section-heading reveal">
+
+      <span className="section-number">
+        ◈
+      </span>
+
+      <div>
+        <p className="section-kicker">
+          LEARNING
+        </p>
+
+        <h2>
+          Certifications
+        </h2>
+      </div>
+
+    </div>
+
+    <div className="certification-list">
+
+      {profile.certifications.map((certificate) => (
+
+        <a
+          className="certificate reveal"
+          key={certificate.title}
+          href={certificate.file}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <div className="container">
 
-            <div className="section-heading reveal">
-
-              <span className="section-number">
-                ◈
-              </span>
-
-              <div>
-
-                <p className="section-kicker">
-                  LEARNING
-                </p>
-
-                <h2>
-                  Certification
-                </h2>
-
-              </div>
-
-            </div>
-
-            <div className="certification-list">
-
-              {profile.certifications.map(
-                (certificate) => (
-
-                  <div
-                    className="certificate reveal"
-                    key={certificate}
-                  >
-
-                    <span>
-                      ✓
-                    </span>
-
-                    <p>
-                      {certificate}
-                    </p>
-
-                    <span className="certificate-arrow">
-                      ↗
-                    </span>
-
-                  </div>
-
-                )
-              )}
-
-            </div>
-
+          <div className="certificate-preview">
+            <img
+              src={certificate.image}
+              alt={`${certificate.title} preview`}
+            />
           </div>
-        </section>
+
+          <div className="certificate-info">
+            <h3>{certificate.title}</h3>
+            <p>{certificate.issuer}</p>
+            <span>{certificate.year}</span>
+          </div>
+
+          <span className="certificate-arrow">
+            VIEW CERTIFICATE ↗
+          </span>
+
+        </a>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
 
         {/* =========================
             CONTACT

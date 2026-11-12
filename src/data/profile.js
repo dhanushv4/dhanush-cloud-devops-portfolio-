@@ -1,39 +1,46 @@
+
 const profile = {
   name: "Dhanush V",
-
   role: "MCA Graduate",
-
   email: "vdhanushyam@gmail.com",
-
   phone: "6380921601",
-
   location: "Bengaluru, India",
-
   headline: "CLOUD & DEVOPS",
 
-  // Hero / portfolio image
   image: "/image/cloud.png",
 
   about: `
-MCA graduate with hands-on experience in AWS, Linux, Docker, Kubernetes,
-Git, Jenkins, Argo CD, Terraform, Ansible, NGINX and Bash.
+MCA graduate with hands-on project experience in AWS, Linux, Docker,
+Kubernetes, Git, Jenkins, Argo CD, Terraform, Ansible, NGINX and Bash.
 
-Experienced in containerized application deployment, Kubernetes administration,
-GitOps workflows, Infrastructure as Code, cloud infrastructure, automation,
-monitoring and troubleshooting.
+Experienced in containerized application deployment, Infrastructure
+as Code, CI/CD workflows, cloud infrastructure, automation,
+monitoring and troubleshooting through practical projects.
 
-Familiar with Terraform-based infrastructure provisioning and
-Ansible-based server configuration and deployment.
-
-Seeking an entry-level Cloud/DevOps Engineer, AWS Engineer,
-Cloud Infrastructure Engineer or SRE role.
+Seeking an entry-level Cloud Engineer, DevOps Engineer,
+AWS Engineer, Cloud Infrastructure Engineer or Junior SRE role.
 `,
 
   experience: [
-    "Cloud & DevOps Training — ACTE, Bengaluru | 2026",
-    "Practiced AWS services including EC2, S3, IAM and VPC through hands-on cloud infrastructure exercises",
-    "Worked with Linux, Bash, Docker and Kubernetes for system administration and application deployment",
-    "Used Git, GitHub, Jenkins, Argo CD, NGINX and Terraform for version control, CI/CD, GitOps and Infrastructure as Code"
+    {
+      title: "Cloud Computing & DevOps Intern",
+      company: "QUBINEX",
+      location: "Chennai, Tamil Nadu",
+      period: "2026",
+
+      description:[
+  "Successfully completed an internship in Cloud Computing with exposure to cloud technologies and DevOps practices.",
+  "Developed foundational knowledge of cloud computing concepts, services, and real-world applications.",
+  "Gained practical exposure to DevOps workflows, infrastructure technologies, and deployment processes.",
+  "Completed assigned internship tasks with consistency, dedication, and attention to detail.",
+  "Demonstrated problem-solving abilities, discipline, and a proactive approach to learning.",
+  "Strengthened technical skills through practical exercises and project-based learning activities."
+],
+      trainer: "Prabhu S",
+      trainerRole: "Technical Lead",
+      status: "Internship Completed"
+    },
+
   ],
 
   education: [
@@ -54,7 +61,20 @@ Cloud Infrastructure Engineer or SRE role.
   ],
 
   certifications: [
-    "Cloud Computing — ACTE, Bengaluru"
+    {
+      title: "Cloud Computing",
+      issuer: "ACTE, Bengaluru",
+      year: "2026",
+      file: "/certificates/Dhanush-V-ACTE-Certificate.pdf",
+      image: "/certificates/acte-preview.jpg"
+    },
+    {
+      title: "Cloud Computing Internship",
+      issuer: "QUBINEX",
+      year: "2026",
+      file: "/certificates/DHANUSH-V-INTERNSHIP-CERTIFICATE.pdf",
+      image: "/certificates/qubinex-preview.jpg"
+    }
   ],
 
   expertise: [
@@ -62,18 +82,23 @@ Cloud Infrastructure Engineer or SRE role.
     "AWS S3",
     "AWS IAM",
     "AWS VPC",
+    "AWS Lambda",
+    "AWS SQS",
+    "AWS API Gateway",
+    "AWS DynamoDB",
     "AWS CloudWatch",
     "AWS Security Groups",
-    "AWS CLI",
+    "GCP Fundamentals",
     "Linux",
     "Ubuntu",
     "Bash",
     "Git",
     "GitHub",
+    "GitHub Actions",
     "Jenkins",
     "CI/CD",
     "Argo CD",
-    "GitOps",
+    "GitOps Fundamentals",
     "Docker",
     "Docker Compose",
     "Kubernetes",
@@ -81,16 +106,17 @@ Cloud Infrastructure Engineer or SRE role.
     "Terraform",
     "Ansible",
     "NGINX",
-    "Ingress",
     "HTTP/HTTPS",
-    "Python",
-    "Flask",
+    "Port Mapping",
+    "Prometheus",
+    "Grafana",
+    "Node Exporter",
+    "cAdvisor",
     "MySQL",
-    "SQL",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Shell Scripting"
+    "SQL Fundamentals",
+    "JSON",
+    "YAML",
+    "Cloud Cost Estimation"
   ],
 
   languages: [
@@ -105,7 +131,7 @@ Cloud Infrastructure Engineer or SRE role.
   resume: "/Dhanush.pdf",
 
   projects: [
-    { 
+    {
       title: "Cloud-Based Chaos Engineering & Infrastructure Monitoring",
 
       description: `
@@ -127,25 +153,13 @@ Developed supporting services using Flask, NGINX, Linux and Bash.
 `,
 
       technologies: [
-        "AWS EC2",
-        "Terraform",
-        "Docker",
-        "Docker Compose",
-        "AWS Lambda",
-        "Amazon SQS",
-        "CloudWatch",
-        "Flask",
-        "NGINX",
-        "GitHub Actions",
-        "Docker Hub",
-        "Linux",
-        "Bash"
+        "AWS EC2", "Terraform", "Docker", "Docker Compose",
+        "AWS Lambda", "Amazon SQS", "CloudWatch", "Flask",
+        "NGINX", "GitHub Actions", "Docker Hub", "Linux", "Bash"
       ],
 
       github: "https://github.com/dhanushv4/chaos-lab.git",
-
       youtube: "https://youtu.be/NeNoNlKaAUI?si=U2pmD-xFapj6lZZP",
-
       documents: "public/docements/Choas Engineer-Cloud Based.pdf"
     },
 
@@ -154,38 +168,26 @@ Developed supporting services using Flask, NGINX, Linux and Bash.
 
       description: `
 Automated multi-cloud infrastructure deployment using Terraform
-and Ansible, supporting AWS and GCP through a single infra.conf
-configuration file.
+and Ansible, supporting AWS and GCP.
 
-Automated AWS and GCP infrastructure provisioning using Terraform.
+Created reusable infrastructure configurations and automated
+cloud resource provisioning.
 
-Used Ansible for server configuration and dynamic inventory.
+Used Ansible for server configuration and inventory management.
 
 Automated Docker and NGINX installation and deployment.
 
-Implemented infrastructure validation and lifecycle management.
-
-Created shell scripts for automated deployment, verification and cleanup.
-
-Designed a reusable cloud-agnostic configuration workflow.
+Created shell scripts for automated deployment, verification
+and infrastructure cleanup.
 `,
 
       technologies: [
-        "AWS",
-        "GCP",
-        "Terraform",
-        "Ansible",
-        "Docker",
-        "NGINX",
-        "Bash",
-        "Linux",
-        "Shell Scripting"
+        "AWS", "GCP", "Terraform", "Ansible", "Docker",
+        "NGINX", "Bash", "Linux", "Shell Scripting"
       ],
 
       github: "https://github.com/dhanushv4/cloud-agnostics",
-
       youtube: "https://youtu.be/3M60xOIgRKA?si=AgP_-w5n3IHEXnRE",
-
       document: "public/docements/Cloud-Agnostics docement.pdf"
     },
 
@@ -193,78 +195,45 @@ Designed a reusable cloud-agnostic configuration workflow.
       title: "AWS Cloud Cost Estimation & Analysis",
 
       description: `
-Python-based AWS cloud cost estimation application designed to
-estimate infrastructure costs before deployment.
+Developed a desktop application to estimate AWS infrastructure
+costs based on configurable cloud resources.
 
-Developed a GUI-based cost estimation tool that allows users to
-select AWS resources and calculate estimated monthly and yearly costs.
+Designed a graphical user interface for resource selection
+and cost estimation.
 
-Implemented cost calculation logic for AWS infrastructure resources
-and provided visual cost analysis through charts and reports.
-
-Built the application using Python and Tkinter with a simple
-user-friendly interface for cloud cost planning.
-
-The project helps users understand estimated AWS infrastructure
-expenses and compare resource costs before deployment.
+Used structured JSON pricing data for resource-based
+cost calculations and cloud cost analysis.
 `,
 
       technologies: [
-        "AWS",
-        "Python",
-        "Tkinter",
-        "AWS EC2",
-        "Cloud Cost Estimation",
-        "Cost Analysis",
-        "GUI",
-        "Data Visualization",
-        "Linux",
-        "Git",
-        "GitHub"
+        "Python", "Tkinter", "JSON", "AWS Pricing",
+        "Cloud Cost Estimation", "Git", "GitHub"
       ],
 
       github: "https://github.com/dhanushv4/aws-cost-estimation.git"
     },
-  
+
     {
       title: "AWS Serverless Web Analytics & Feedback Platform",
 
       description: `
 Developed a serverless web analytics and visitor feedback platform
-using AWS services, Python, HTML, CSS and JavaScript.
+using AWS services.
 
-Designed backend functions using AWS Lambda and exposed RESTful
-endpoints through Amazon API Gateway.
+Hosted the frontend using Amazon S3 and integrated API Gateway
+with AWS Lambda for backend processing.
 
-Implemented page-view tracking and visitor feedback storage using
-Amazon DynamoDB.
+Used DynamoDB to store page-view analytics and visitor feedback.
 
-Developed analytics functionality to calculate page views, identify
-popular pages and generate daily statistics.
-
-Configured scheduled processing using Amazon EventBridge and used
-Amazon CloudWatch for application logging and monitoring.
-
-Documented the application architecture, API endpoints, deployment
-steps and testing procedures.
+Configured EventBridge for scheduled processing and CloudWatch
+for application logging and monitoring.
 `,
 
       technologies: [
-        "AWS Lambda",
-        "Amazon API Gateway",
-        "Amazon DynamoDB",
-        "Amazon S3",
-        "Amazon EventBridge",
-        "Amazon CloudWatch",
-        "Python",
-        "Boto3",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "REST API",
-        "Serverless Architecture",
-        "Git",
-        "GitHub"
+        "AWS Lambda", "Amazon API Gateway", "Amazon DynamoDB",
+        "Amazon S3", "Amazon EventBridge", "Amazon CloudWatch",
+        "HTML", "CSS", "JavaScript", "REST API",
+        "Serverless Architecture", "Git", "GitHub"
       ],
 
       github: "https://github.com/dhanushv4/aws-serverless-web-analytics"
