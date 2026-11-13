@@ -1247,24 +1247,14 @@ a {
 
 .certificate {
   display: grid;
-
-  grid-template-columns: 110px 1fr auto;
-
+  grid-template-columns: 110px 1fr;
   gap: 20px;
-
   align-items: center;
-
   min-height: 130px;
-
   padding: 15px;
-
   border: 1px solid var(--border);
   border-radius: 10px;
-
-  text-decoration: none;
   color: inherit;
-
-  cursor: pointer;
 
   transition:
     transform var(--transition),
@@ -1285,18 +1275,21 @@ a {
   overflow: hidden;
   border-radius: 6px;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .certificate-preview img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform var(--transition);
 }
 
 .certificate:hover .certificate-preview img {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 /* Certificate Details */
@@ -1324,24 +1317,6 @@ a {
   font-size: 11px;
 }
 
-/* View Certificate */
-
-.certificate-arrow {
-  color: #929089;
-  font-size: 11px;
-  font-family: var(--font-mono);
-  white-space: nowrap;
-
-  transition:
-    color var(--transition),
-    transform var(--transition);
-}
-
-.certificate:hover .certificate-arrow {
-  color: var(--accent);
-  transform: translate(3px, -3px);
-}
-
 /* Tablet */
 
 @media (max-width: 900px) {
@@ -1367,12 +1342,9 @@ a {
   .certificate-info h3 {
     font-size: 14px;
   }
-
-  .certificate-arrow {
-    grid-column: 2;
-    justify-self: start;
-  }
 }
+
+
 
 /* =========================
    CONTACT

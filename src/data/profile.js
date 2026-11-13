@@ -73,7 +73,7 @@ certifications: [
     title: "Cloud Computing Internship",
     issuer: "QUBINEX",
     year: "2026",
-    file: "/certificates/DHANUSH%20V%20-%20INTEN.pdf",
+    file: "/certificates/DHANUSH-V-INTERNSHIP-CERTIFICATE.pdf",
     image: "/certificates/qubinex-preview.jpg"
   }
 ],

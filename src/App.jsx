@@ -653,6 +653,7 @@ function App() {
         {/* =========================
             PROJECTS
         ========================= */}
+
 <section
   id="projects"
   className="section projects-section reveal-section"
@@ -677,78 +678,87 @@ function App() {
 
     <div className="projects-list">
 
-      {profile.projects.map((project, index) => (
+      {profile.projects.map((project, index) => {
 
-        <article
-          className="project-item reveal"
-          key={project.title}
-          onClick={() => setSelectedProject(project)}
-          tabIndex="0"
-          role="button"
-          onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              setSelectedProject(project);
-            }
-          }}
-        >
+        const projectCategories = [
+          "MONITORING",
+          "IaC",
+          "CLOUD COST",
+          "SERVERLESS"
+        ];
 
-          {/* Project Type */}
-          <div className="project-index">
-            {index === 0
-              ? "AWS"
-              : index === 1
-              ? "IAC"
-              : "CLOUD"}
-          </div>
+        return (
+          <article
+            className="project-item reveal"
+            key={project.title}
+            onClick={() => setSelectedProject(project)}
+            tabIndex="0"
+            role="button"
+            onKeyDown={(event) => {
+              if (
+                event.key === "Enter" ||
+                event.key === " "
+              ) {
+                event.preventDefault();
+                setSelectedProject(project);
+              }
+            }}
+          >
 
-     {/* Project Content */}
-<div className="project-main">
+            {/* Project Category */}
 
-  <div className="project-heading">
-    <h3>{project.title}</h3>
-  </div>
+            <div className="project-index">
+              {projectCategories[index] || "CLOUD • DEVOPS"}
+            </div>
 
-  <p>
-    {project.description
-      .trim()
-      .split("\n")[0]}
-  </p>
+            {/* Project Content */}
 
-  <div className="project-tech">
-    {project.technologies
-      .slice(0, 6)
-      .map((technology) => (
-        <span key={technology}>
-          {technology}
-        </span>
-      ))}
-  </div>
+            <div className="project-main">
 
-</div>
+              <div className="project-heading">
+                <h3>{project.title}</h3>
+              </div>
 
-{/* View Details Only */}
-<div
-  className="project-action"
-  onClick={(event) => event.stopPropagation()}
->
-  <button
-    type="button"
-    className="project-view"
-    onClick={() => setSelectedProject(project)}
-  >
-    VIEW DETAILS
-  </button>
-</div>
+              <p>
+                {project.description.trim().split("\n")[0]}
+              </p>
 
-        </article>
+              <div className="project-tech">
+                {project.technologies
+                  .slice(0, 6)
+                  .map((technology) => (
+                    <span key={technology}>
+                      {technology}
+                    </span>
+                  ))}
+              </div>
 
-      ))}
+            </div>
+
+            {/* View Details */}
+
+            <div
+              className="project-action"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                type="button"
+                className="project-view"
+                onClick={() => setSelectedProject(project)}
+              >
+                VIEW DETAILS
+              </button>
+            </div>
+
+          </article>
+        );
+      })}
 
     </div>
 
   </div>
 </section>
+
         {/* =========================
             EXPERIENCE
         ========================= */}
@@ -906,7 +916,7 @@ function App() {
 
     <div className="certification-list">
 
-      {profile.certifications.map((certificate) => (
+      {profile.certifications?.map((certificate) => (
 
         <article
           className="certificate reveal"
@@ -929,15 +939,6 @@ function App() {
             <span>{certificate.year}</span>
           </div>
 
-          <a
-            className="certificate-arrow"
-            href={certificate.file}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            VIEW CERTIFICATE ↗
-          </a>
-
         </article>
 
       ))}
@@ -945,7 +946,6 @@ function App() {
     </div>
   </div>
 </section>
-
 
 
         {/* =========================
